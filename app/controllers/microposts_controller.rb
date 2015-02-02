@@ -15,6 +15,12 @@ class MicropostsController < ApplicationController
   # GET /microposts/new
   def new
     @micropost = Micropost.new
+    
+    # HaoNV
+    @users = User.all
+    end
+
+
   end
 
   # GET /microposts/1/edit
@@ -24,6 +30,7 @@ class MicropostsController < ApplicationController
   # POST /microposts
   # POST /microposts.json
   def create
+
     @micropost = Micropost.new(micropost_params)
 
     respond_to do |format|
